@@ -1,0 +1,15 @@
+.submit-button-container {
+  margin-top: 50px;
+}
+
+.submit-button {
+  border: none;
+  outline: none;
+  background-color: rgba(0,128,1,255);
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 3px;
+  width: 300px;
+  cursor: pointer;
+}

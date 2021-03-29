@@ -1,0 +1,13 @@
+.input-field-container {
+
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  outline: 0;
+  border-width: 0 0 1px;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 10px;
+}

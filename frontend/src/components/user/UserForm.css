@@ -1,0 +1,17 @@
+.user-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  width: 360px;
+  height: 230px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
