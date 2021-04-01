@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import RegisterPage from "./components/user/RegisterPage";
 import LoginPage from "./components/user/LoginPage";
+import Main from "./components/main/Main";
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path='/login'>
             <LoginPage />
+          </Route>
+          <Route path='/main'>
+            <Main />
           </Route>
         </Switch>
       </div>

@@ -1,0 +1,24 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(247,247,247,255);
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.items {
+  position: absolute;
+  top: 100px;
+  width: 66%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.item-error {
+  position: absolute;
+  top: 700px;
+}

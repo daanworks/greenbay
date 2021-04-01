@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
 import InputField from "./InputField";
 import SubmitButton from "./SubmitButton";
 import './UserForm.css';
@@ -6,6 +7,7 @@ import Fetch from "../fetch/Fetch";
 
 const UserForm = (props) => {
 
+  const history = useHistory();
   const type = props.type;
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -14,12 +16,10 @@ const UserForm = (props) => {
 
   function handleUserNameChange(event) {
     setUsername(event.target.value);
-    console.log(username);
   }
 
   function handlePasswordChange(event) {
     setPassword(event.target.value);
-    console.log(password);
   }
 
   function handleSubmit(event) {
@@ -44,6 +44,21 @@ const UserForm = (props) => {
           .then(result => {
             let inputs = document.querySelectorAll('input');
             Array.from(inputs).forEach(input => (input.innerText = ''));
+          })
+          .catch(error => {
+            setUsername(username);
+            setPassword(password);
+            setError(error.toString());
+          });
+      }
+      if(type === 'Login') {
+        Fetch('/login', 'POST', body)
+          .then(result => {
+            localStorage.setItem('token', result.token.data.token);
+            localStorage.setItem('userid', result.userid);
+            localStorage.setItem('username', result.username);
+            setUsername(result.username);
+            history.push('/main');
           })
           .catch(error => {
             setUsername(username);

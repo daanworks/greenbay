@@ -13,3 +13,7 @@
   width: 300px;
   cursor: pointer;
 }
+
+.submit-button:hover {
+  background-color: rgba(125,179,120,255);
+}

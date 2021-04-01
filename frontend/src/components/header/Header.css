@@ -1,9 +1,41 @@
 .header-container {
   position: absolute;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   width: 100%;
   height: 60px;
   background-color: rgba(0,128,1,255);
+  color: white;
+}
+
+.header-title {
+  font-weight: 700;
+}
+
+.header-left {
+  margin-left: 20px;
+}
+
+.header-right {
+  display: flex;
+  height: 100%;
+}
+
+.header-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100px;
+}
+
+.header-element:hover {
+  background-color: rgba(125,179,120,255);
+}
+
+.header-element-buttontext {
+  text-decoration: none;
   color: white;
 }
